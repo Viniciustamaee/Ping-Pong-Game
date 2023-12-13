@@ -17,9 +17,9 @@ adv1.addEventListener('click', () => {
     placarAdv1.innerText = scoreAdv1;
     game.disabled = true;
     if (scoreAdv1 == game.value) {
-        const label = document.createElement('label');
-        label.textContent = 'Parabéns Primeiro Jogador';
-        document.body.appendChild(label);
+        const h3 = document.createElement('h3');
+        h3.textContent = 'Parabéns Primeiro Jogador';
+        document.body.appendChild(h3);
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'green';
@@ -32,9 +32,9 @@ adv2.addEventListener('click', () => {
     game.disabled = true;
     placarAdv2.innerText = scoreAdv2;
     if (scoreAdv2 == game.value) {
-        const label = document.createElement('label');
-        label.textContent = 'Parabéns Segundo Jogador';
-        document.body.appendChild(label);
+        const h3 = document.createElement('h3');
+        h3.textContent = 'Parabéns Segundo Jogador';
+        document.body.appendChild(h3);
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'red';
