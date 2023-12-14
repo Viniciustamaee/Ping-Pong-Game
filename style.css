@@ -2,15 +2,16 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
-.container {
+.container-fluid {
     background-color: #dee2e6;
     margin-bottom: 40px;
     border-radius: 20px;
-
+    max-width: 700px;
+    padding-bottom: 50px;
 }
 
 header img {
-    width: 40%;
+    width: 90%;
     padding-top: 5px;
     border-radius: 20px;
 }
@@ -45,8 +46,8 @@ section #reset {
     color: #001d3d;
 }
 
-@media (max-width: 750px) {
-    .container {
+@media (max-width: 900px) {
+    .container-fluid {
         padding-top: 20px;
         margin-top: 40px;
     }
