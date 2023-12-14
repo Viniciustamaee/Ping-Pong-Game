@@ -1,12 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
 .container {
-    background-color: #ccd5ae;
-    border-radius: 20px;
+    background-color: #dee2e6;
     margin-bottom: 40px;
+    border-radius: 20px;
 
 }
 
 header img {
-    height: 1% !important;
+    width: 40%;
     padding-top: 5px;
     border-radius: 20px;
 }
@@ -18,13 +22,10 @@ header label {
 header select {
     width: 10%;
     border-radius: 40px;
-    background: none
+    background-color: white;
 }
 
-section h1 {
-    /* margin: 50px 20px; */
-    text-align: center;
-}
+
 
 section #adv1 {
     width: 100%;
@@ -40,8 +41,17 @@ section #reset {
     width: 100%;
 }
 
+#h3 {
+    color: #001d3d;
+}
+
 @media (max-width: 750px) {
     .container {
+        padding-top: 20px;
         margin-top: 40px;
+    }
+
+    header img {
+        width: 100%;
     }
 }
