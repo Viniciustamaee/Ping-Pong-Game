@@ -13,7 +13,7 @@ let scoreAdv1 = 0;
 let scoreAdv2 = 0;
 
 // label
-const label = document.querySelector('label')
+const select = document.querySelector('select')
 const h3 = document.createElement('h3');
 
 adv1.addEventListener('click', () => {
@@ -23,7 +23,7 @@ adv1.addEventListener('click', () => {
 
     if (scoreAdv1 == game.value) {
         h3.textContent = 'Parabéns Primeiro Jogador';
-        label.insertAdjacentElement('afterend', h3)
+        select.insertAdjacentElement('afterend', h3)
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'green';
@@ -40,7 +40,7 @@ adv2.addEventListener('click', () => {
 
     if (scoreAdv2 == game.value) {
         h3.textContent = 'Parabéns Primeiro Jogador';
-        label.insertAdjacentElement('afterend', h3)
+        select.insertAdjacentElement('afterend', h3)
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'red';

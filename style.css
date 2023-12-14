@@ -1,10 +1,14 @@
-.headerImg {
-    margin-top: 20px;
+.container {
+    background-color: #ccd5ae;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
 }
 
 header img {
-    height: 200px;
-    border-radius: 10px;
+    height: 1% !important;
+    padding-top: 5px;
+    border-radius: 20px;
 }
 
 header label {
@@ -12,11 +16,13 @@ header label {
 }
 
 header select {
-    width: 100%;
+    width: 10%;
     border-radius: 40px;
+    background: none
 }
 
 section h1 {
+    /* margin: 50px 20px; */
     text-align: center;
 }
 
@@ -27,11 +33,15 @@ section #adv1 {
 
 section #adv2 {
     width: 100%;
-
     background-color: #03045e;
 }
 
 section #reset {
     width: 100%;
+}
 
+@media (max-width: 750px) {
+    .container {
+        margin-top: 40px;
+    }
 }
