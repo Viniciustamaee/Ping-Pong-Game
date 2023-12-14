@@ -12,18 +12,24 @@ const game = document.querySelector('#games');
 let scoreAdv1 = 0;
 let scoreAdv2 = 0;
 
+// label
+const label = document.querySelector('label')
+const h3 = document.createElement('h3');
+
 adv1.addEventListener('click', () => {
     scoreAdv1 += 1;
     placarAdv1.innerText = scoreAdv1;
     game.disabled = true;
+
     if (scoreAdv1 == game.value) {
-        const h3 = document.createElement('h3');
         h3.textContent = 'Parabéns Primeiro Jogador';
-        document.body.appendChild(h3);
+        label.insertAdjacentElement('afterend', h3)
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'green';
         placarAdv2.style.color = 'red';
+        h3.style.color = 'green';
+        reset.textContent = 'New Game'
     }
 });
 
@@ -31,14 +37,16 @@ adv2.addEventListener('click', () => {
     scoreAdv2 += 1;
     game.disabled = true;
     placarAdv2.innerText = scoreAdv2;
+
     if (scoreAdv2 == game.value) {
-        const h3 = document.createElement('h3');
-        h3.textContent = 'Parabéns Segundo Jogador';
-        document.body.appendChild(h3);
+        h3.textContent = 'Parabéns Primeiro Jogador';
+        label.insertAdjacentElement('afterend', h3)
         adv1.disabled = true;
         adv2.disabled = true;
         placarAdv1.style.color = 'red';
         placarAdv2.style.color = 'green';
+        h3.style.color = 'green';
+        reset.textContent = 'New Game'
     }
 });
 
@@ -52,4 +60,6 @@ reset.addEventListener('click', () => {
     game.disabled = false;
     placarAdv1.style.color = 'black';
     placarAdv2.style.color = 'black';
+    h3.remove()
+    reset.textContent = 'Reset'
 });
