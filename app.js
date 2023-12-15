@@ -8,7 +8,7 @@ const game = document.querySelector('#games');
 
 let scoreAdv1 = 0;
 let scoreAdv2 = 0;
-let inputScore = 0;
+let inputScore = 1;
 
 
 const select = document.querySelector('select')
@@ -41,10 +41,8 @@ adv2.addEventListener('click', () => {
 
     if (scoreAdv2 == game.value || scoreAdv2 == inputScore) {
         h3.textContent = 'Player 2 Win';
-        select.insertAdjacentElement('afterend', h3)
         adv1.disabled = true;
         adv2.disabled = true;
-        input.disabled = true;
         placarAdv1.style.color = 'red';
         placarAdv2.style.color = 'green';
         h3.style.color = 'green';
@@ -55,7 +53,7 @@ adv2.addEventListener('click', () => {
 reset.addEventListener('click', () => {
     scoreAdv1 = 0;
     scoreAdv2 = 0;
-    input.value = 0;
+    input.value = 1;
     placarAdv1.innerText = '0';
     placarAdv2.innerText = '0';
     adv1.disabled = false;
@@ -76,7 +74,7 @@ reset.addEventListener('click', () => {
 game.addEventListener('click', () => {
     if (game.value == 'g') {
         game.style.display = 'none'
-        input.style.display = 'block'
+        input.style.display = 'inline'
         input.addEventListener('input', () => {
             inputScore = input.value;
         });
