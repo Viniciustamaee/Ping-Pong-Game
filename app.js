@@ -8,7 +8,7 @@ const game = document.querySelector('#games');
 
 let scoreAdv1 = 0;
 let scoreAdv2 = 0;
-let inputScore = 1;
+let inputScore = 0;
 
 
 const select = document.querySelector('select')
@@ -22,7 +22,7 @@ adv1.addEventListener('click', () => {
     game.disabled = true;
     input.disabled = true;
 
-    if (scoreAdv1 == game.value || scoreAdv1 == inputScore) {
+    if (scoreAdv1 == game.value || scoreAdv1 == input.value) {
         h3.textContent = 'Player 1 Winning';
         adv1.disabled = true;
         adv2.disabled = true;
@@ -39,7 +39,7 @@ adv2.addEventListener('click', () => {
     input.disabled = true;
     placarAdv2.innerText = scoreAdv2;
 
-    if (scoreAdv2 == game.value || scoreAdv2 == inputScore) {
+    if (scoreAdv2 == game.value || scoreAdv2 == input.value) {
         h3.textContent = 'Player 2 Win';
         adv1.disabled = true;
         adv2.disabled = true;
@@ -53,7 +53,7 @@ adv2.addEventListener('click', () => {
 reset.addEventListener('click', () => {
     scoreAdv1 = 0;
     scoreAdv2 = 0;
-    input.value = 1;
+    input.value = '';
     placarAdv1.innerText = '0';
     placarAdv2.innerText = '0';
     adv1.disabled = false;
@@ -75,8 +75,9 @@ game.addEventListener('click', () => {
     if (game.value == 'g') {
         game.style.display = 'none'
         input.style.display = 'inline'
-        input.addEventListener('input', () => {
-            inputScore = input.value;
-        });
+        if (input.value == 0) {
+            input.value = 1
+        }
+
     }
 })
